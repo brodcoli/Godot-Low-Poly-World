@@ -18,3 +18,5 @@ I used these sounds from freesound.org:<br />
 https://freesound.org/people/Moulaythami/sounds/541302/<br />
 https://freesound.org/people/Fission9/sounds/521590/<br />
 https://freesound.org/people/UnplugTheFridge/sounds/529224/<br />
+
+I also used the PICO-8 font for the debug info text
