@@ -1,0 +1,129 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Cursor.gd" type="Script" id=2]
+[ext_resource path="res://textures/underwater.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Underwater.gd" type="Script" id=5]
+[ext_resource path="res://materials/Player.material" type="Material" id=6]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void fragment() {
+    float len = length(UV - vec2(0.5));
+	float blur_amt = 0.0;//pow(len, 0.75);
+	float darken_amt = pow(len, 5);
+
+	vec4 col = textureLod(SCREEN_TEXTURE, SCREEN_UV, blur_amt);
+    COLOR = mix(col, vec4(vec3(0), 1.0), darken_amt);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[sub_resource type="SphereMesh" id=3]
+radius = 0.5
+height = 1.0
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 0.2, 0.2, 2 )
+
+[sub_resource type="CapsuleShape" id=5]
+radius = 0.5
+
+[sub_resource type="CylinderMesh" id=6]
+top_radius = 0.3
+bottom_radius = 0.5
+height = 1.7
+
+[sub_resource type="ConvexPolygonShape" id=7]
+points = PoolVector3Array( -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0, -2, 0 )
+
+[sub_resource type="SphereShape" id=8]
+radius = 0.1
+
+[node name="Player" type="KinematicBody" groups=[
+"Player",
+]]
+script = ExtResource( 1 )
+
+[node name="Head" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0 )
+
+[node name="Camera" type="ClippedCamera" parent="Head"]
+cull_mask = 1048573
+current = true
+far = 800.0
+
+[node name="Vignette" type="ColorRect" parent="Head/Camera"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mesh" type="MeshInstance" parent="Head"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.00949574, 1.19209e-07, -0.00363612 )
+layers = 2
+mesh = SubResource( 3 )
+material/0 = ExtResource( 6 )
+
+[node name="NoseMesh" type="MeshInstance" parent="Head"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.754173 )
+visible = false
+layers = 2
+cast_shadow = 0
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="BirdsEyeViewCamera" type="ClippedCamera" parent="Head"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50 )
+far = 1000.0
+clip_to_bodies = false
+
+[node name="Center" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Center"]
+margin_left = 520.0
+margin_top = 292.0
+margin_right = 520.0
+margin_bottom = 292.0
+
+[node name="Cursor" type="Sprite" parent="Center/Control"]
+z_index = 1
+centered = false
+script = ExtResource( 2 )
+
+[node name="Underwater" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1024, 600 )
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 1, 0 )
+shape = SubResource( 5 )
+
+[node name="BodyMesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0 )
+visible = false
+layers = 2
+mesh = SubResource( 6 )
+material/0 = ExtResource( 6 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+shape = SubResource( 7 )
+disabled = true
+
+[node name="CollisionShape3" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0 )
+shape = SubResource( 8 )
+disabled = true

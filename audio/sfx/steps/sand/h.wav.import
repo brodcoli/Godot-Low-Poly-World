@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/h.wav-c3ed5bd88aa9faef864bd528a870d67c.sample"
+
+[deps]
+
+source_file="res://audio/sfx/steps/sand/h.wav"
+dest_files=[ "res://.import/h.wav-c3ed5bd88aa9faef864bd528a870d67c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

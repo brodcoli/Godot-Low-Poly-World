@@ -1,0 +1,7 @@
+extends Node
+
+const SEED = 6436433 #19263484
+const CHUNK_WIDTH = 10 #10
+const TRI_WIDTH = 3 #3
+const TOTAL_CHUNK_WIDTH = CHUNK_WIDTH * TRI_WIDTH
+const WATER_LEVEL = -7

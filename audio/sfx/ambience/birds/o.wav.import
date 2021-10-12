@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/o.wav-e9b8d4872e08383fde8fe94211b59ad6.sample"
+
+[deps]
+
+source_file="res://audio/sfx/ambience/birds/o.wav"
+dest_files=[ "res://.import/o.wav-e9b8d4872e08383fde8fe94211b59ad6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

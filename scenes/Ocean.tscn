@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://materials/OceanBelow.material" type="Material" id=1]
+[ext_resource path="res://materials/Ocean2.material" type="Material" id=3]
+
+[sub_resource type="PlaneMesh" id=1]
+material = ExtResource( 3 )
+size = Vector2( 30, 30 )
+subdivide_width = 6
+subdivide_depth = 6
+
+[sub_resource type="PlaneMesh" id=2]
+material = ExtResource( 1 )
+size = Vector2( 30, 30 )
+
+[node name="Ocean" type="Spatial"]
+
+[node name="Above" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Below" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -1, 3.25841e-07, 0, -3.25841e-07, -1, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null

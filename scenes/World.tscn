@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Options.tscn" type="PackedScene" id=3]
+[ext_resource path="res://environments/main.tres" type="ProceduralSky" id=5]
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = ExtResource( 5 )
+background_color = Color( 0.168627, 0.152941, 0.160784, 1 )
+fog_enabled = true
+fog_color = Color( 0.266, 0.475767, 0.7, 1 )
+fog_depth_end = 1500.0
+dof_blur_far_distance = 194.46
+dof_blur_far_transition = 477.23
+adjustment_enabled = true
+adjustment_brightness = 0.85
+adjustment_contrast = 1.4
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 0.188235 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://fonts/PICO-8 mono.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 8
+font_data = SubResource( 5 )
+
+[node name="World" type="Spatial"]
+
+[node name="Sun" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.644204, 0.764854, 0, -0.764854, 0.644204, 0, 16.1811, -0.619638 )
+light_energy = 2.0
+shadow_enabled = true
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 400.0
+
+[node name="ReflectedLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.644204, -0.764854, 0, 0.764854, -0.644204, -0.135953, 18.8352, -2.62029 )
+light_energy = 0.3
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 37.1938, 0 )
+
+[node name="Debug" type="Node" parent="."]
+
+[node name="Background" type="Sprite" parent="Debug"]
+position = Vector2( -1.25989, -1.25992 )
+scale = Vector2( 0.1, 85.3342 )
+texture = SubResource( 4 )
+centered = false
+
+[node name="Label" type="Label" parent="Debug"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 240.0
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "FPS = N/A
+POSITION = N/A
+BIOME = N/A
+RENDER = 0/0
+SPEED = 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nos" type="Label" parent="Debug"]
+margin_left = 211.5
+margin_top = 6.0
+margin_right = 419.501
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.886275, 0.309804, 0.309804, 0.686275 )
+text = "NOS ACTIVATED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" parent="." instance=ExtResource( 3 )]

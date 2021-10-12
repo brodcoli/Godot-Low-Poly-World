@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/d.wav-4eeeec69e6da9ab45f1e438b308a20f4.sample"
+
+[deps]
+
+source_file="res://audio/sfx/steps/grass_old/d.wav"
+dest_files=[ "res://.import/d.wav-4eeeec69e6da9ab45f1e438b308a20f4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

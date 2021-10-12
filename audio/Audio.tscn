@@ -1,0 +1,240 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://audio/sfx/steps/grass/c.wav" type="AudioStream" id=1]
+[ext_resource path="res://audio/sfx/steps/grass/a.wav" type="AudioStream" id=2]
+[ext_resource path="res://audio/sfx/steps/grass/d.wav" type="AudioStream" id=3]
+[ext_resource path="res://audio/sfx/steps/grass/e.wav" type="AudioStream" id=4]
+[ext_resource path="res://audio/sfx/steps/grass/b.wav" type="AudioStream" id=5]
+[ext_resource path="res://audio/sfx/noise/white_noise.wav" type="AudioStream" id=6]
+[ext_resource path="res://audio/sfx/steps/rock/d.wav" type="AudioStream" id=7]
+[ext_resource path="res://audio/sfx/steps/rock/e.wav" type="AudioStream" id=8]
+[ext_resource path="res://audio/sfx/steps/rock/c.wav" type="AudioStream" id=9]
+[ext_resource path="res://audio/sfx/steps/rock/b.wav" type="AudioStream" id=10]
+[ext_resource path="res://audio/sfx/ambience/birds/a.wav" type="AudioStream" id=11]
+[ext_resource path="res://audio/sfx/steps/rock/a.wav" type="AudioStream" id=12]
+[ext_resource path="res://audio/sfx/steps/sand/e.wav" type="AudioStream" id=13]
+[ext_resource path="res://audio/sfx/steps/sand/h.wav" type="AudioStream" id=14]
+[ext_resource path="res://audio/sfx/steps/sand/i.wav" type="AudioStream" id=15]
+[ext_resource path="res://audio/sfx/steps/sand/d.wav" type="AudioStream" id=16]
+[ext_resource path="res://audio/sfx/steps/sand/c.wav" type="AudioStream" id=17]
+[ext_resource path="res://audio/sfx/steps/sand/b.wav" type="AudioStream" id=18]
+[ext_resource path="res://audio/sfx/steps/sand/a.wav" type="AudioStream" id=19]
+[ext_resource path="res://audio/sfx/steps/sand/f.wav" type="AudioStream" id=20]
+[ext_resource path="res://audio/sfx/steps/sand/g.wav" type="AudioStream" id=21]
+[ext_resource path="res://audio/sfx/steps/sand/j.wav" type="AudioStream" id=22]
+[ext_resource path="res://audio/sfx/ambience/birds/d.wav" type="AudioStream" id=23]
+[ext_resource path="res://audio/sfx/steps/grass/j.wav" type="AudioStream" id=24]
+[ext_resource path="res://audio/sfx/steps/grass/h.wav" type="AudioStream" id=25]
+[ext_resource path="res://audio/sfx/steps/grass/i.wav" type="AudioStream" id=26]
+[ext_resource path="res://audio/sfx/steps/grass/g.wav" type="AudioStream" id=27]
+[ext_resource path="res://audio/sfx/steps/grass/f.wav" type="AudioStream" id=28]
+[ext_resource path="res://audio/sfx/ambience/birds/l.wav" type="AudioStream" id=29]
+[ext_resource path="res://audio/sfx/ambience/birds/g.wav" type="AudioStream" id=30]
+[ext_resource path="res://audio/sfx/ambience/birds/n.wav" type="AudioStream" id=31]
+[ext_resource path="res://audio/sfx/ambience/birds/o.wav" type="AudioStream" id=32]
+[ext_resource path="res://audio/sfx/ambience/birds/e.wav" type="AudioStream" id=33]
+[ext_resource path="res://audio/sfx/ambience/birds/c.wav" type="AudioStream" id=34]
+[ext_resource path="res://audio/sfx/ambience/birds/h.wav" type="AudioStream" id=35]
+[ext_resource path="res://audio/sfx/ambience/birds/b.wav" type="AudioStream" id=36]
+[ext_resource path="res://audio/sfx/ambience/birds/i.wav" type="AudioStream" id=37]
+[ext_resource path="res://audio/sfx/ambience/birds/k.wav" type="AudioStream" id=38]
+[ext_resource path="res://audio/sfx/ambience/birds/j.wav" type="AudioStream" id=39]
+[ext_resource path="res://audio/sfx/ambience/birds/f.wav" type="AudioStream" id=40]
+[ext_resource path="res://audio/sfx/ambience/birds/m.wav" type="AudioStream" id=41]
+[ext_resource path="res://audio/Audio.gd" type="Script" id=42]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource( 42 )
+
+[node name="Steps" type="Node" parent="."]
+
+[node name="Grass" type="Node" parent="Steps"]
+
+[node name="A" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 2 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="B" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 5 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="C" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 1 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="D" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 3 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="E" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 4 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="F" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 28 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="G" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 27 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="H" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 25 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="I" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 26 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="J" type="AudioStreamPlayer" parent="Steps/Grass"]
+stream = ExtResource( 24 )
+volume_db = 7.0
+bus = "Step"
+
+[node name="Rock" type="Node" parent="Steps"]
+
+[node name="A" type="AudioStreamPlayer" parent="Steps/Rock"]
+stream = ExtResource( 12 )
+volume_db = -8.0
+bus = "Step"
+
+[node name="B" type="AudioStreamPlayer" parent="Steps/Rock"]
+stream = ExtResource( 10 )
+volume_db = -8.0
+bus = "Step"
+
+[node name="C" type="AudioStreamPlayer" parent="Steps/Rock"]
+stream = ExtResource( 9 )
+volume_db = -8.0
+bus = "Step"
+
+[node name="D" type="AudioStreamPlayer" parent="Steps/Rock"]
+stream = ExtResource( 7 )
+volume_db = -8.0
+bus = "Step"
+
+[node name="E" type="AudioStreamPlayer" parent="Steps/Rock"]
+stream = ExtResource( 8 )
+volume_db = -8.0
+bus = "Step"
+
+[node name="Sand" type="Node" parent="Steps"]
+
+[node name="A" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 19 )
+bus = "Step"
+
+[node name="B" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 18 )
+bus = "Step"
+
+[node name="C" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 17 )
+bus = "Step"
+
+[node name="D" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 16 )
+bus = "Step"
+
+[node name="E" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 13 )
+bus = "Step"
+
+[node name="F" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 20 )
+bus = "Step"
+
+[node name="G" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 21 )
+bus = "Step"
+
+[node name="H" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 14 )
+bus = "Step"
+
+[node name="I" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 15 )
+bus = "Step"
+
+[node name="J" type="AudioStreamPlayer" parent="Steps/Sand"]
+stream = ExtResource( 22 )
+bus = "Step"
+
+[node name="Misc" type="Node" parent="."]
+
+[node name="Wind" type="AudioStreamPlayer" parent="Misc"]
+stream = ExtResource( 6 )
+bus = "Wind"
+
+[node name="Ambience" type="Node" parent="."]
+
+[node name="Birds" type="Node" parent="Ambience"]
+
+[node name="A" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 11 )
+unit_db = 30.0
+
+[node name="B" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 36 )
+unit_db = 30.0
+
+[node name="C" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 34 )
+unit_db = 30.0
+
+[node name="D" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 23 )
+unit_db = 30.0
+
+[node name="E" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 33 )
+unit_db = 30.0
+
+[node name="F" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 40 )
+unit_db = 30.0
+
+[node name="G" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 30 )
+unit_db = 30.0
+
+[node name="H" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 35 )
+unit_db = 30.0
+
+[node name="I" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 37 )
+unit_db = 30.0
+
+[node name="J" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 39 )
+unit_db = 30.0
+
+[node name="K" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 38 )
+unit_db = 30.0
+
+[node name="L" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 29 )
+unit_db = 30.0
+
+[node name="M" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 41 )
+unit_db = 30.0
+
+[node name="N" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 31 )
+unit_db = 30.0
+
+[node name="O" type="AudioStreamPlayer3D" parent="Ambience/Birds"]
+stream = ExtResource( 32 )
+unit_db = 30.0

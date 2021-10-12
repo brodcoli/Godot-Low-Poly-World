@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/e.wav-a54f62abc8276941741c7d5be4316729.sample"
+
+[deps]
+
+source_file="res://audio/sfx/steps/rock/e.wav"
+dest_files=[ "res://.import/e.wav-a54f62abc8276941741c7d5be4316729.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

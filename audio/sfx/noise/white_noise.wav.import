@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/white_noise.wav-ed9e5f3025eb7feeba3aafcb44cb53fb.sample"
+
+[deps]
+
+source_file="res://audio/sfx/noise/white_noise.wav"
+dest_files=[ "res://.import/white_noise.wav-ed9e5f3025eb7feeba3aafcb44cb53fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
