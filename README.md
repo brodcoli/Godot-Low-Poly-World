@@ -1,10 +1,10 @@
 # Godot-Low-Poly-World (Godot 3.5)
 
+*This project was last tested in Godot 3.5 and **does not work with Godot 4.0***
 ![](https://i.imgur.com/x5ABieP.png)
 
 ## Description
-A low-poly procedurally generating world made in Godot<br />
-This project was last tested in Godot 3.5 and **does not work with Godot 4.0**
+A low-poly procedurally generating world made in Godot
 
 ## Controls
 Use `W`, `A`, `S`, `D` to move<br />
